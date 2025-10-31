@@ -1,0 +1,32 @@
+﻿[
+  {
+    "id": 1,
+    "fullName": "מסי בניסטי",
+    "email": "mesi@example.com",
+    "phone": "050-1234567",
+    "company": "דיגיטל ויז'ן",
+    "status": "customer",
+    "tags": ["VIP", "חבר מועדון"],
+    "note": "לקוח חוזר – אוהב סיכום קצר במייל."
+  },
+  {
+    "id": 2,
+    "fullName": "עומר הרשקוביץ",
+    "email": "omer@example.com",
+    "phone": "052-9876543",
+    "company": "ספארק יזמות",
+    "status": "lead",
+    "tags": ["פוטנציאל גבוה"],
+    "note": "ביקש שיחת המשך בשבוע הבא."
+  },
+  {
+    "id": 3,
+    "fullName": "יהודה רם",
+    "email": "yehuda@example.com",
+    "phone": "054-5554433",
+    "company": "שלח לחמך",
+    "status": "contacted",
+    "tags": ["B2B", "צפון"],
+    "note": "מתעניין בשדרוג חבילה, אוהב תקשורת בוואטסאפ."
+  }
+]

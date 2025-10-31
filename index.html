@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CRM | לוח לקוחות פשוט</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="top-bar">
+            <div class="brand">
+                <span class="brand-icon" aria-hidden="true">◎</span>
+                <div class="brand-copy">
+                    <h1>Simple CRM</h1>
+                    <p>כל מה שצריך כדי לשמור על קשר חם עם הלקוחות.</p>
+                </div>
+            </div>
+            <div class="stats-card">
+                <span class="stats-label">לקוחות פעילים</span>
+                <span class="stats-value" id="total-count">0</span>
+            </div>
+        </header>
+
+        <main class="main-grid">
+            <section class="card form-card">
+                <header class="card-header">
+                    <h2>ניהול לקוח</h2>
+                    <p>הוספת לקוח חדש או עדכון לקוח קיים בלחיצה אחת.</p>
+                </header>
+
+                <form id="customer-form" class="form">
+                    <input type="hidden" id="customer-id" name="id">
+
+                    <div class="form-row">
+                        <label for="fullName">שם מלא</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="מורן לוי" required>
+                    </div>
+
+                    <div class="form-row form-row-half">
+                        <div>
+                            <label for="phone">טלפון</label>
+                            <input type="tel" id="phone" name="phone" placeholder="050-1234567" required>
+                        </div>
+                        <div>
+                            <label for="email">דוא"ל</label>
+                            <input type="email" id="email" name="email" placeholder="client@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row form-row-half">
+                        <div>
+                            <label for="company">חברה</label>
+                            <input type="text" id="company" name="company" placeholder="לדוגמה: סטודיו ספיר">
+                        </div>
+                        <div>
+                            <label for="status">סטטוס</label>
+                            <select id="status" name="status">
+                                <option value="lead">ליד</option>
+                                <option value="contacted">בטיפול</option>
+                                <option value="customer">לקוח פעיל</option>
+                                <option value="inactive">לא פעיל</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="tags">תגיות</label>
+                        <input type="text" id="tags" name="tags" placeholder="ידידותי, מועדון זהב">
+                        <small>הפרד בין תגיות באמצעות פסיק.</small>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="note">הערות</label>
+                        <textarea id="note" name="note" rows="3" placeholder="כל פרט חשוב לניהול השיחה הבא."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">הוספת לקוח</button>
+                        <button type="button" id="cancel-btn" class="btn btn-tertiary" style="display:none;">ביטול</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card table-card">
+                <header class="card-header">
+                    <h2>רשימת לקוחות</h2>
+                    <p>עקבו אחר מצב הלקוחות, עדכנו ונהלו אותם במהירות.</p>
+                </header>
+
+                <div class="table-wrapper">
+                    <table id="customers-table">
+                        <thead>
+                            <tr>
+                                <th>שם מלא</th>
+                                <th>טלפון</th>
+                                <th>דוא"ל</th>
+                                <th>סטטוס</th>
+                                <th>תגיות</th>
+                                <th>פעולות</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customers-list"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
